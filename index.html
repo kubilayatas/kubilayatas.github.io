@@ -81,26 +81,30 @@
             justify-content: center;
             text-align: center;
             padding: 0 20px;
-            /* Arka plan görselini buraya ekleyeceğiz */
-            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.8)), url('kapak_fotografi.jpg');
-            background-size: cover;
-            background-position: center;
             margin-top: 60px;
+            position: relative;
+            
+            /* Resim ayarları */
+            background-size: cover;     /* Resmi ekranı kaplayacak şekilde yay */
+            background-position: center; /* Resmi ortala */
+            background-repeat: no-repeat;
         }
 
         .hero-content h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Yazı okunabilirliği için gölge */
         }
 
         .hero-content span { color: var(--primary); }
 
         .hero-content p {
             font-size: 1.2rem;
-            color: #cbd5e1;
+            color: #e2e8f0; /* Biraz daha parlak gri, resim üstünde okunsun diye */
             max-width: 800px;
             margin: 0 auto 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
         }
 
         .btn {
@@ -112,6 +116,7 @@
             border-radius: 5px;
             font-weight: 600;
             transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
         }
 
         .btn:hover { transform: translateY(-3px); background-color: #0284c7; }
@@ -223,7 +228,7 @@
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 2.5rem; }
-            nav { display: none; } /* Basitlik için mobilde menüyü gizledik */
+            nav { display: none; } 
             .about { flex-direction: column; }
         }
     </style>
@@ -244,7 +249,8 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" style="background-image: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.8)), url('kapak_gorseli.png');">
+        
         <div class="hero-content">
             <h1>Sürüş Güvenliğinde <br> <span>Yapay Zeka</span> Devrimi</h1>
             <p>DriveSafely, sürücü davranışlarını gerçek zamanlı analiz ederek dikkatsizliği ve kazaları önleyen, akademik olarak doğrulanmış bir güvenlik asistanıdır.</p>
@@ -330,7 +336,7 @@
         <div class="about">
             <div class="about-text">
                 <h2>Laboratuvardan Yollara</h2>
-                <p>YTÜ Elektronik ve Haberleşme Mühendisliği Bölümü'nde yürütülen doktora çalışmaları ve derin teknoloji araştırmalarının bir çıktısı olan DriveSafely, akademik birikimi ticarileşebilir bir ürüne dönüştürmeyi hedefler.</p>
+                <p>YTÜ Elektronik ve Haberleşme Mühendisliği Bölümü'nde yürütülen yüksek lisans çalışması ve derin teknoloji araştırmalarının bir çıktısı olan DriveSafely, akademik birikimi ticarileşebilir bir ürüne dönüştürmeyi hedefler.</p>
                 <br>
                 <ul>
                     <li><i class="fa-solid fa-check"></i> 4 Yıllık Ar-Ge Geçmişi</li>
@@ -346,9 +352,9 @@
         <p style="margin-top: 1rem; color: #94a3b8;">Yatırımcılar ve partnerlik için iletişime geçin.</p>
         
         <div class="social-links">
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/kubilay-ata%C5%9F-baaa10168/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:kubilayatas@hotmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/kubilayatas/SecurelyDrive"><i class="fa-brands fa-github"></i></a>
         </div>
         
         <p style="font-size: 0.8rem; margin-top: 2rem;">&copy; 2024 DriveSafely. Tüm hakları saklıdır.</p>
